@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-medicine-details-component',
@@ -6,8 +7,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./medicine-details-component.component.css']
 })
 export class MedicineDetailsComponentComponent implements OnInit {
+  stockDet=[]
+  constructor(private dataservice:DataService) {
 
-  constructor() { }
+    let uID=localStorage.getItem("uID")
+    this.dataservice.displayStock(uID)
+     .subscribe((result:any)=>{
+       if(result){
+         this.stockDet=result.message
+       }
+      },
+      (result)=>{
+alert(result.error.message)
+      
+     })
+
+   }
 
   ngOnInit(): void {
   }

@@ -1,1 +1,20 @@
-<p>signup-component works!</p>
+<div class="inCenterForm">
+    
+	<form action="" method="" autocomplete="off" (ngSubmit)="signUp()" [formGroup]="registerform">
+        <h2 class="active" style="text-align: center;">Create New Account  </h2>
+		<div class="container">
+			<label for="uname"><b>Username</b></label>
+			<input type="text" placeholder="Enter Username" formControlName="uname"  name="uname" required>
+	
+			<label for="email"><b>Email</b></label>
+			<input type="text" placeholder="Enter Email" formControlName="email"  name="email" required>
+	
+			<label for="psw"><b>Password</b></label>
+			<input type="password" placeholder="Enter Password" formControlName="password" name="psw" required>
+	
+			<button class="buttonStyle" type="submit">SIGN UP</button>
+			
+		</div>
+	</form>
+</div>
+

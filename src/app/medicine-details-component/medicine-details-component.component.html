@@ -1,1 +1,38 @@
-<p>medicine-details-component works!</p>
+
+<form >
+    
+    <div class="row mainDiv" >
+        <div class="col-4"></div>
+        <div class="col-4">
+           <table class="table">
+               <tr class="trheading">
+                   
+                   <td>Sl#</td>
+                   <td>Medicine</td>
+                   <td>Quantity</td>
+                   <td>Price</td>
+                   <td>Total</td>
+                   
+               </tr>
+               <tbody>
+                <tr  *ngFor="let result of stockDet;let i=index;"  >
+                   
+                 <td  >{{i+1}}</td>   
+               <td >{{result.Medicine}}</td>
+              <td>{{result.Quantity}}</td>
+               <td>{{result.Price}}</td>
+               <td>eval({{result.Price}} * {{result.Quantity}})</td>
+               <!-- eval({{result.Price}} * {{result.Quantity}}) -->
+               <button class="deleteButton"  >DELETE</button>
+               <button class="ediButton"  >Edit</button>
+
+
+</tr>
+               </tbody>
+           </table>
+        </div>
+        <div class="col-4"></div>
+       
+        
+    </div>
+    </form>
