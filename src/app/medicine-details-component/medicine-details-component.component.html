@@ -15,19 +15,25 @@
                    
                </tr>
                <tbody>
-                <tr  *ngFor="let result of stockDet;let i=index;"  >
+                
+                <tr  *ngFor="let result of stockDet;let i=index;" >
                    
                  <td  >{{i+1}}</td>   
                <td >{{result.Medicine}}</td>
               <td>{{result.Quantity}}</td>
                <td>{{result.Price}}</td>
-               <td>eval({{result.Price}} * {{result.Quantity}})</td>
-               <!-- eval({{result.Price}} * {{result.Quantity}}) -->
-               <button class="deleteButton"  >DELETE</button>
-               <button class="ediButton"  >Edit</button>
-
-
-</tr>
+               <td> {{result.Price * result.Quantity}} </td>
+               
+               
+               <button class="ediButton" (click)="updateRow(i,result.Medicine,result.Quantity,result.Price)" >Edit</button>
+               <button class="deleteButton" (click)="deleteRow(i)" >Delete</button>
+            </tr>
+            
+                <tr>
+                    <td colspan="3" style="text-align:left">Total</td>
+                    <td></td>
+                  </tr>
+            
                </tbody>
            </table>
         </div>
@@ -35,4 +41,42 @@
        
         
     </div>
+    </form>
+    <form action="">
+        <div class="row mainDiv" id="editDiv" style="display: none;" >
+            <div class="col-4"></div>
+            <div class="col-4">
+               <table class="table">
+                   <tr class="trheading">
+                       
+                       
+                       <td>Medicine</td>
+                       <td>Quantity</td>
+                       <td>Price</td>
+                       
+                   </tr>
+                   <tbody>
+                    <tr >
+                       <input type="hidden"  name="txthidden" id="" [(ngModel)]="indexNum" >
+                     <td >
+                         <input type="text" name="Medicine" id="" [(ngModel)]="Medicine">
+                     </td> 
+                     <td >
+                        <input type="text" name="Quantity" id="" [(ngModel)]="Quantity">
+                    </td> 
+                    <td >
+                        <input type="text" name="Price" id="" [(ngModel)]="Price">
+                    </td>   
+
+                    
+                   <button class="btnUpdate" (click)="editMedicine(indexNum,Medicine,Quantity,Price)" >update</button>
+                   </tr>
+                   </tbody>
+               </table>
+            </div>
+            
+        </div>
+    
+    
+    
     </form>

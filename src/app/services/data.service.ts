@@ -49,4 +49,26 @@ return this.http.post('http://localhost:3000/addStock',data,this.options)
 return this.http.post('http://localhost:3000/displayStock',data,this.options)
 
   }
+  deleteMedicine(email:any,indexNum:any){
+    const data={
+      email:email,
+      index:indexNum
+
+    }
+    
+return this.http.post('http://localhost:3000/deleteMedicine',data,this.options)
+
+  }
+  update(email:any,indexNum:any,Medicine:any,Quantity:any,Price:any){
+    const data={
+       email:email,
+       indexNum:indexNum,
+       Medicine:Medicine,
+       Quantity:Quantity,
+       Price:Price
+     }
+     return this.http.post('http://localhost:3000/updateStock',data,this.options)
+     
+     
+   }
 }

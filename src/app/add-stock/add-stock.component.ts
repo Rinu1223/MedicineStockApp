@@ -28,6 +28,7 @@ export class AddStockComponent implements OnInit {
     .subscribe((result:any)=>{
       if(result){
         alert(result.message);
+        location.reload();
         
       }
     },
