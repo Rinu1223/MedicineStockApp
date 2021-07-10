@@ -23,6 +23,7 @@ export class MedicineDetailsComponentComponent implements OnInit {
         for (let index = 0; index < this.stockDet.length; index++) {
           this.total +=  (this.stockDet[index].Quantity)*(this.stockDet[index].Price)
          }
+         return this.total
         }
       },
       (result)=>{

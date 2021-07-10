@@ -4,7 +4,7 @@
     <div class="row mainDiv" >
         <div class="col-4"></div>
         <div class="col-4">
-           <table class="table">
+           <table class="table" border="1">
                <tr class="trheading">
                    
                    <td>Sl#</td>
@@ -22,7 +22,7 @@
                <td >{{result.Medicine}}</td>
               <td>{{result.Quantity}}</td>
                <td>{{result.Price}}</td>
-               <td> {{result.Price * result.Quantity}} </td>
+               <td style="text-align: right;"> {{result.Price * result.Quantity}} </td>
                
                
                <button class="ediButton" (click)="updateRow(i,result.Medicine,result.Quantity,result.Price)" >Edit</button>
@@ -30,8 +30,8 @@
             </tr>
             
                 <tr>
-                    <td colspan="3" style="text-align:left">Total</td>
-                    <td></td>
+                    <td colspan="4" style="text-align:right">Total</td>
+                    <td> {{total}}</td>
                   </tr>
             
                </tbody>
