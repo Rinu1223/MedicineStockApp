@@ -38,7 +38,7 @@ export class AddStockComponent implements OnInit {
     })
     }
     else{
-      alert("Invalid form")
+      alert("Please fill all fiedls")
     }
   }
 }

@@ -1,0 +1,11 @@
+.userDiv{
+    position: relative;
+    left: 988px;
+    font-size: medium;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.divLogout{
+    position: relative;
+    left: 1013px;
+    top:2px;
+}

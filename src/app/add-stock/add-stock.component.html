@@ -8,9 +8,9 @@
       
       
       <form (ngSubmit)="addStock()" [formGroup]="addform" >
-        <input type="text"   name="medicine" formControlName="Medicine" placeholder="Medicine" required>
-        <input type="text"   name="Quantity" formControlName="Quantity" placeholder="Quantity">
-        <input type="text"   name="Price"    formControlName="Price"    placeholder="Price">
+        <input type="text"   name="medicine" formControlName="Medicine" maxlength="100" placeholder="Medicine" required>
+        <input type="text"   name="Quantity" formControlName="Quantity" maxlength="7" placeholder="Quantity" required>
+        <input type="text"   name="Price"    formControlName="Price"  maxlength="7"   placeholder="Price" required>
         <input type="submit" class="fadeIn fourth"  value="Add">
         </form>
   

@@ -1,9 +1,27 @@
-<div>
-   <h1> Medicine Stock </h1> 
-   <div>{{user}} </div>
-   <button>Logout</button>
-<app-add-stock></app-add-stock>
+<!-- <div>
+ <div>Medicine Stock </div>  
+   {{user}} 
+  <button >Logout</button> 
 </div>
+<app-add-stock></app-add-stock>
+
 <div>
     <app-medicine-details-component></app-medicine-details-component>
+</div> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+
+<div class="container">
+<div class="row">
+    <div class="col-12 col-sm-12 col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <h2>Medicine Stock</h2>
+                <div class="userDiv">{{user}} </div>
+                <div class="divLogout"><button (click)="Logout()">Logout</button></div>
+            </div>
+            <app-add-stock></app-add-stock>
+            <app-medicine-details-component></app-medicine-details-component>
+        </div>
+    </div>
+</div>
 </div>
